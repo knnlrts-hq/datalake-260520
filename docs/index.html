@@ -56,27 +56,10 @@
         </aside>
       </section>
 
-      <!-- 03 · THE DIAGNOSIS -->
-      <section id="diagnosis" class="past" style="display: none;" hidden="" aria-hidden="true">
-        <p class="kicker">trax Analytics Platform - technical architecture</p>
-        <div class="content" style="justify-content: center;">
-          <blockquote style="font-size: 32pt; border-left-width: 5px;">
-            We have an impressive architecture in search of a validated product problem — and a real contractual deadline the architecture isn't built to meet.
-          </blockquote>
-          <p class="text-xl text-muted font-italic font-serif" style="margin-top: 36px; max-width: 80%;">
-            This is a <span class="text-petrol">sequencing</span> problem, not a vision problem. Sequencing problems are fixable.
-          </p>
-        </div>
-        <aside class="notes">
-          Two-sentence slide. Don't add. Read both lines and stop talking. The slide is doing the work.
-          Note the gentleness — we are not killing the architecture, we are correcting the order.
-        </aside>
-      </section>
-
       <!-- 04 · THE GAP -->
       <section id="gap" class="past" style="display: none;" hidden="" aria-hidden="true">
         <p class="kicker">The current gap · Ask vs. answer</p>
-        <h2>High-level requirements versus low-level technical architecture.</h2>
+        <h2>High-level requirements&nbsp;<div>versus&nbsp;</div><div>low-level technical architecture.</div></h2>
         <div class="content">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 14px;">
             <div class="panel petrol">
@@ -104,7 +87,7 @@
 
       <!-- 05 · FOUR PROBLEMS -->
       <section id="four-problems" class="past" style="display: none;" hidden="" aria-hidden="true">
-        <p class="kicker">Four problems, rolled into one budget</p>
+        <p class="kicker">Four problems, rolled into one</p>
         <h2>We are mixing different things into one initiative.</h2>
         <p class="deck">These things are not the same. Solving these four problems in one architecture is exactly how we will end up with an unmaintainable system that nobody can operate in the future.</p>
         <div class="content">
@@ -273,12 +256,12 @@
         <h2>Definition of done.</h2>
         <div class="content" style="justify-content: center;">
           <blockquote style="font-size: 30pt; border-left-color: var(--moss); border-left-width: 5px;">
-            <span class="text-moss font-italic">One customer in production</span> on the new analytics path — with a runbook a non-developer can execute, against a datamart that has zero write paths from the consumer side.
+            <span class="text-moss font-italic">One customer in production</span> with their own BI tool on the new analytics path, with a runbook a non-developer can execute, against read-only datamart tables from the consumer side.
           </blockquote>
           <p class="text-lg text-muted font-italic font-serif text-center" style="margin-top: 28px;">
             Before June 2027. Everything else can wait.
           </p>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 36px;">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 36px;">
             <div class="stat">
               <span class="stat-num oxblood">2</span>
               <span class="stat-label">named pilots: Atlas Copco, UNICC</span>
@@ -286,10 +269,6 @@
             <div class="stat">
               <span class="stat-num">1</span>
               <span class="stat-label">BI tool, end-to-end, before adding a second</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">0</span>
-              <span class="stat-label">write paths to the operational DB</span>
             </div>
           </div>
         </div>
@@ -409,7 +388,7 @@
       </section>
 
       <!-- 15 · DIVIDER: LONG TERM -->
-      <section id="div-long" class="section-divider past" data-state="is-section-divider" style="display: none;" hidden="" aria-hidden="true">
+      <section id="div-long" class="section-divider past" data-state="is-section-divider" style="display: block;" hidden="" aria-hidden="true">
         <p class="act-num">Horizon 3 · 2028+</p>
         <h1>Long term:<br><span class="text-muted">only if justified.</span></h1>
         <p class="act-sub">The advanced data platform we may one day operate.&nbsp;</p>
@@ -417,9 +396,9 @@
 
       <!-- 16 · THE LAKE WE MAY DESERVE -->
       <section id="lake" class="past" style="display: block;" hidden="" aria-hidden="true">
-        <p class="kicker muted">Long term · Receipts required</p>
+        <p class="kicker muted">Long term · use cases required</p>
         <h2>The datalake solution we may one day operate.</h2>
-        <p class="deck">Six gates. Every commitment on this platform should pass all six or it doesn't ship to production.&nbsp;</p>
+        <p class="deck">Six gates. Every commitment on this data platform should pass all six or it doesn't ship to production.&nbsp;</p>
         <div class="content">
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 32px; margin-top: 6px;">
             <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
@@ -460,23 +439,19 @@
             <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
               <p class="step-num text-petrol">06</p>
               <div>
-                <p class="step-title">Freshness honesty</p>
+                <p class="step-title">Data freshness honesty</p>
                 <p class="step-note">Batch / hourly / near-real-time / synchronous are strictly separated. Every real-time requirement, needs a named reason.</p>
               </div>
             </div>
           </div>
-          <div style="display: flex; justify-content: flex-end; margin-top: 14px;">
-            <p class="stamp">Promising demos do not count</p>
-          </div>
         </div>
         <aside class="notes">
-          The stamp at the bottom-right is the only humour cue on this slide. Let it sit.
           The point of the six gates is to make "no" easy to say without sounding like a no-person.
         </aside>
       </section>
 
       <!-- 17 · AI/ML/MCP -->
-      <section id="ai-ml" class="past" style="display: block;" hidden="" aria-hidden="true">
+      <section id="ai-ml" class="present" style="display: block;">
         <p class="kicker muted">Long term · AI · ML · anomaly detection</p>
         <h2>Discovery, not delivery.</h2>
         <p class="deck">This is currently the vaguest section. This is honesty; not a lack of ambition.</p>
@@ -492,7 +467,7 @@
               </ul>
             </div>
             <div>
-              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What we will not do</p>
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What we will NOT do</p>
               <ul>
                 <li>Build AWS SageMaker pipelines / Feature data stores / model-serving infra.</li>
                 <li>Deploy CDC streaming for sub-10&nbsp;ms scoring.</li>
@@ -513,7 +488,7 @@
       </section>
 
       <!-- 18 · THE ASK -->
-      <section id="the-ask" class="present" style="display: block;">
+      <section id="the-ask" class="future" style="display: block;" hidden="" aria-hidden="true">
         <p class="kicker">The ask · Four decisions, today</p>
         <h2>What we need to agree on today.</h2>
         <div class="content">
@@ -539,10 +514,6 @@
               <p>Product Management (customer use cases) and Development (feasibility) to work together on a new business case.</p>
             </div>
           </div>
-          <blockquote style="margin-top: 20px; font-size: 19pt; border-left-color: var(--petrol);">
-            We are not anti-platform. We are pro-customer, pro-deadline, and pro-team-that-can-maintain-the-thing-they-built.
-            <cite>— the bottom line.</cite>
-          </blockquote>
         </div>
         <aside class="notes">
           Read the four decisions slowly. Look at the relevant leader for each one. Then read the quote.
@@ -569,7 +540,7 @@
 					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
 			<button class="navigate-right highlight enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
 			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
-			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">The ask · Four decisions, today What we need from this room. Decision 01 Split up the datalake initiative Clear disctinction between Logi replacement, data lake evolution, AI/ML use cases. Separate scope, owners, funding, cadence. Decision 02 Freeze any solutioning that already happened. Long-term reference material, not the next sprint. No new build under it until gates pass. Decision 03 Focus on Logi replacement Read-only datamart tables access, BI tooling POC, runbook, pilots, synthetic dataset. Decision 04 Collaborate on a new business case document for anything beyond Logi replacement Product Management (customer use cases) and Development (feasibility) to work together on a new business case. We are not anti-platform. We are pro-customer, pro-deadline, and pro-team-that-can-maintain-the-thing-they-built. — the bottom line. </div><div class="backgrounds"><div class="slide-background section-divider present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/title">
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Long term · AI · ML · anomaly detection Discovery, not delivery. This is currently the vaguest section. This is honesty; not a lack of ambition. What we will do Pick one use case, clearly defined end-to-end (anything). Try a statistical baseline first; the product already has SQL fraud patterns. Define action, false-positive plan, explainability, audit, owner. Scope a governed LLM / MCP spike against synthetic data. What we will not do Build AWS SageMaker pipelines / Feature data stores / model-serving infra. Deploy CDC streaming for sub-10&nbsp;ms scoring. Wire Bedrock into production payments workflows. Promise any unfounded AI capability to a customer, an RFP, or a sales deck. “AI/ML” is downstream of trustworthy data — not the foundation for it. </div><div class="backgrounds"><div class="slide-background section-divider present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/title">
 					<span class="slide-number-a">1</span>
 					<span class="slide-number-delimiter">/</span>
 					<span class="slide-number-b">19</span>
@@ -798,9 +769,51 @@
 					<span class="slide-number-delimiter">/</span>
 					<span class="slide-number-b">19</span>
 					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
-			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right highlight enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
 			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
-			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.944444);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div></div>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.944444);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="backgrounds"><div class="slide-background section-divider past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/gap">
+					<span class="slide-number-a">3</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">18</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.117647);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="backgrounds"><div class="slide-background section-divider past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/gap">
+					<span class="slide-number-a">3</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">18</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right highlight enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.117647);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="backgrounds"><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/four-problems">
+					<span class="slide-number-a">4</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">18</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.176471);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="backgrounds"><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/lake">
+					<span class="slide-number-a">15</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">18</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.823529);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="backgrounds"><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/lake">
+					<span class="slide-number-a">15</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">18</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.823529);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="backgrounds"><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background section-divider past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background section-divider future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="#/ai-ml">
+					<span class="slide-number-a">16</span>
+					<span class="slide-number-delimiter">/</span>
+					<span class="slide-number-b">18</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.882353);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div></div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
@@ -826,6 +839,51 @@
       }
     });
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

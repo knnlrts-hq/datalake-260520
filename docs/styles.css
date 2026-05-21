@@ -95,7 +95,7 @@
 .reveal ul { list-style: none; padding-left: 0; }
 .reveal ul li { position: relative; padding-left: 18px; }
 .reveal ul li::before {
-  content: "—";
+  content: "-";
   position: absolute;
   left: 0;
   color: var(--oxblood);
