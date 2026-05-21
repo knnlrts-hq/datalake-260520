@@ -3,9 +3,10 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 async function checkSlideOverflow(htmlPath) {
-  const fileUrl = htmlPath.startsWith('http') ? htmlPath : `file://${path.resolve(htmlPath)}`;
+  const absolutePath = path.resolve(htmlPath);
+  const fileUrl = `file://${absolutePath}`;
 
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors'] });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 
   // Set viewport to standard presentation size
