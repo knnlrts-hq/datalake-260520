@@ -1,0 +1,10 @@
+# Build/dependency artefacts (not part of the deck — installed locally for testing only)
+node_modules/
+package-lock.json
+package.json
+
+# OS junk
+.DS_Store
+
+# Temp scripts created during overflow / screenshot checks
+.tmp-*.js
