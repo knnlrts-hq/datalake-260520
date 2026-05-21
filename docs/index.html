@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trax Analytics — A Defensible Roadmap</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 01 · TITLE -->
+      <section id="title" class="section-divider" data-state="is-section-divider">
+        <p class="act-num">An Internal Working Session &middot; May 2026</p>
+        <h1>Trax Analytics.<br><span class="text-oxblood">A defensible roadmap.</span></h1>
+        <p class="act-sub">First keep customers whole. Then earn the right to build a platform. In that order, with receipts at every step.</p>
+        <p class="footnote">Koen Naulaerts &middot; for PM &middot; PS &middot; Presales &middot; Engineering</p>
+        <aside class="notes">
+          Open quietly. The argument doesn't need volume. Read the second line out loud and let it sit for a beat —
+          the rest of the deck is just the proof, the steps, and the price of not doing it.
+        </aside>
+      </section>
+
+      <!-- 02 · THE CLOCK -->
+      <section id="clock">
+        <p class="kicker">Cold open &middot; The one number that doesn't move</p>
+        <div class="content" style="justify-content: center;">
+          <div style="display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center;">
+            <div>
+              <p class="font-mono text-sm text-muted" style="letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px;">Logi license sunset</p>
+              <p class="bignum oxblood">Jun&nbsp;'27</p>
+            </div>
+            <div>
+              <p class="lede" style="margin-bottom: 22px;">That is not a roadmap horizon.<br>It is a contractual cliff.</p>
+              <p class="text-xl text-muted font-italic font-serif">~ 13 months &mdash; not 13 quarters.</p>
+              <hr class="rule" style="margin: 22px 0;">
+              <p class="text-lg"><strong>The whole deck collapses to one sentence:</strong><br>
+                Payment Hub customers must still have working analytics on the day Logi turns off.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          The deadline is the only fact in the room that no architecture review can re-debate.
+          Anchor here. If we miss it, nothing else matters; if we hit it, we earn every other conversation that follows.
+        </aside>
+      </section>
+
+      <!-- 03 · THE DIAGNOSIS -->
+      <section id="diagnosis">
+        <p class="kicker">The diagnosis &middot; In one sentence</p>
+        <div class="content" style="justify-content: center;">
+          <blockquote style="font-size: 32pt; border-left-width: 5px;">
+            We have an impressive architecture in search of a validated product problem &mdash; and a real contractual deadline the architecture isn't built to meet.
+          </blockquote>
+          <p class="text-xl text-muted font-italic font-serif" style="margin-top: 36px; max-width: 80%;">
+            The good news: this is a <span class="text-petrol">sequencing</span> problem, not a vision problem. Sequencing problems are fixable.
+          </p>
+        </div>
+        <aside class="notes">
+          Two-sentence slide. Don't add. Read both lines and stop talking. The slide is doing the work.
+          Note the gentleness — we are not killing the architecture, we are correcting the order.
+        </aside>
+      </section>
+
+      <!-- 04 · THE GAP -->
+      <section id="gap">
+        <p class="kicker">The gap &middot; Ask vs. answer</p>
+        <h2>One paragraph of requirement.<br>Five phases of platform.</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 14px;">
+            <div class="panel petrol">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What the business case asks for</p>
+              <p class="font-serif font-italic" style="font-size: 19pt; line-height: 1.35; color: var(--ink);">
+                &ldquo;Export Payment Hub data &mdash; on demand or scheduled &mdash; so clients can build reports in their own tools, eventually combinable with Quantum.&rdquo;
+              </p>
+              <p class="text-sm text-muted font-italic" style="margin-top: 14px;">That is the entire document.</p>
+            </div>
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What the architecture answers with</p>
+              <p style="font-size: 14pt; line-height: 1.5;">
+                Per-customer AWS lakehouses &middot; Apache Iceberg &middot; Bronze / Silver / Gold &middot; Lake Formation governance &middot; SageMaker ML pipelines &middot; real-time anomaly scoring &middot; Bedrock LLM explanations &middot; CDC streaming &middot; sub-10&nbsp;ms inference &middot; cash forecasting &middot; cost tiering &middot; DR &middot; IAM &middot; observability.
+              </p>
+            </div>
+          </div>
+          <p class="text-center text-xl" style="margin-top: 28px;">
+            <span class="text-oxblood font-serif font-italic">Two to three orders of magnitude apart</span> &mdash; but who's counting.
+          </p>
+        </div>
+        <aside class="notes">
+          Let the visual asymmetry do the talking. The left box is a single sentence. The right box is a shopping list.
+          The point is not that the right side is wrong — it is that nobody asked for it yet.
+        </aside>
+      </section>
+
+      <!-- 05 · FOUR PROBLEMS -->
+      <section id="four-problems">
+        <p class="kicker">The mess &middot; Four problems, one budget</p>
+        <h2>We have been treating these as one initiative.</h2>
+        <p class="deck">They are not. Solving four problems in one architecture is exactly how you end up with a system nobody can operate.</p>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 1 &middot; Deadline Jun 2027</p>
+              <h3 style="margin: 6px 0;">Logi license replacement</h3>
+              <p>Customers need a supported analytics path the day Logi turns off. <strong>Contractual. Non-negotiable.</strong></p>
+            </div>
+            <div class="panel petrol">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 2 &middot; In-flight</p>
+              <h3 style="margin: 6px 0;">Customer self-service data access</h3>
+              <p>Clients want to query Payment Hub data with their own BI tools. The datamart has gaps &mdash; but it exists today.</p>
+            </div>
+            <div class="panel dim">
+              <p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 3 &middot; Strategic</p>
+              <h3 style="margin: 6px 0;">A governed analytical platform</h3>
+              <p>A lake <em>may</em> be needed for cross-product analytics and Quantum alignment. <em>May.</em></p>
+            </div>
+            <div class="panel dim">
+              <p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 4 &middot; Speculative</p>
+              <h3 style="margin: 6px 0;">AI &middot; ML &middot; Anomaly &middot; MCP</h3>
+              <p>Candidate capabilities. <strong>Zero validated use cases. Zero labelled datasets.</strong> Zero customers asking by name.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Each problem has its own clock, its own owner, its own evidence bar. Force the room to name which one they were just defending.
+        </aside>
+      </section>
+
+      <!-- 06 · THE FRAME -->
+      <section id="frame">
+        <p class="kicker">The frame &middot; Three horizons, one through-line</p>
+        <h2>The roadmap, on a single page.</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px;">
+            <div class="panel oxblood" style="display: flex; flex-direction: column;">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Short term &middot; Now &rarr; Jun&nbsp;'27</p>
+              <h3 style="margin: 6px 0 10px;">Keep customers whole.</h3>
+              <p>Read-only datamart access. BI reproduction. Two named pilots. A runbook PS can execute without a hero.</p>
+              <p class="font-mono text-sm text-oxblood" style="margin-top: auto; padding-top: 12px; letter-spacing: 0.12em;">DELIVER &middot; WEEKS</p>
+            </div>
+            <div class="panel petrol" style="display: flex; flex-direction: column;">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Medium term &middot; '27 &rarr; '28</p>
+              <h3 style="margin: 6px 0 10px;">Earn the platform.</h3>
+              <p>A ranked, customer-attributed use-case catalogue. A Parquet thin slice. A signed build-vs-reuse decision with Quantum.</p>
+              <p class="font-mono text-sm text-petrol" style="margin-top: auto; padding-top: 12px; letter-spacing: 0.12em;">VALIDATE &middot; QUARTERS</p>
+            </div>
+            <div class="panel dim" style="display: flex; flex-direction: column;">
+              <p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Long term &middot; 2028+</p>
+              <h3 style="margin: 6px 0 10px;">Only if justified.</h3>
+              <p>The smallest durable platform the evidence demands. AI/ML and MCP remain discovery until a real use case earns production money.</p>
+              <p class="font-mono text-sm text-muted" style="margin-top: auto; padding-top: 12px; letter-spacing: 0.12em;">EARN &middot; OPEN-ENDED</p>
+            </div>
+          </div>
+          <hr class="rule thick" style="margin: 26px 0 14px;">
+          <p class="text-center text-xl font-serif font-italic text-muted">
+            One deadline. One discovery. One platform we may one day deserve.
+          </p>
+        </div>
+        <aside class="notes">
+          The colour vocabulary starts here and we use it consistently for the rest of the deck.
+          Oxblood = urgent. Petrol = discovery. Muted = earned, later, maybe.
+        </aside>
+      </section>
+
+      <!-- 07 · DIVIDER: SHORT TERM -->
+      <section id="div-short" class="section-divider" data-state="is-section-divider">
+        <p class="act-num">Horizon 1 &middot; Now &rarr; June 2027</p>
+        <h1>Short term:<br><span class="text-oxblood">keep customers whole.</span></h1>
+        <p class="act-sub">Five steps. One outcome: when Logi turns off, nothing breaks. Everything else is downstream of this.</p>
+        <aside class="notes">
+          This is the section the room must agree on before any other decision matters. Slow down.
+        </aside>
+      </section>
+
+      <!-- 08 · THE FIVE STEPS -->
+      <section id="short-steps">
+        <p class="kicker">Short term &middot; The five steps that ship</p>
+        <h2>Concrete. Sequenced. Customer-facing in weeks.</h2>
+        <div class="content">
+          <div style="margin-top: 6px;">
+            <div class="step">
+              <p class="step-num">01</p>
+              <div>
+                <p class="step-title">Read-only datamart access &mdash; the keystone</p>
+                <p class="step-note">FIS-managed, customer-managed, private. VPN / PrivateLink / read-replica. Zero write paths.</p>
+              </div>
+              <p class="step-meta">Eng + OPS &middot; 3&ndash;4 wks</p>
+            </div>
+            <div class="step">
+              <p class="step-num">02</p>
+              <div>
+                <p class="step-title">Logi dashboard reproduction in a BI tool</p>
+                <p class="step-note">Superset first; compare Power BI / QuickSight. Classify every gap. Findings drive the medium term.</p>
+              </div>
+              <p class="step-meta">Eng + BA &middot; 3 wks</p>
+            </div>
+            <div class="step">
+              <p class="step-num">03</p>
+              <div>
+                <p class="step-title">Operationalisation &amp; runbook &mdash; the boring epic that saves us</p>
+                <p class="step-note">Version matrix. Triage taxonomy. Health checks. PS-executable handoff. No heroes.</p>
+              </div>
+              <p class="step-meta">Eng + PS + OPS &middot; 3 wks</p>
+            </div>
+            <div class="step">
+              <p class="step-num">04</p>
+              <div>
+                <p class="step-title">Pilot: Atlas Copco &amp; UNICC</p>
+                <p class="step-note">PS/CX-led UAT. Real customers find the gaps a hundred internal demos never will.</p>
+              </div>
+              <p class="step-meta">PS/CX + Product &middot; 4 wks</p>
+            </div>
+            <div class="step">
+              <p class="step-num">12</p>
+              <div>
+                <p class="step-title">Synthetic datamart &mdash; the secret weapon</p>
+                <p class="step-note">Realistic, edge-case-rich seed data. De-risks every other step and removes the legal review for experiments.</p>
+              </div>
+              <p class="step-meta">Eng &middot; ongoing</p>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Don't read every row. Highlight #03 (the boring one — it decides whether we ship)
+          and #12 (the synthetic dataset is the leverage move; it pays for itself by Q2).
+        </aside>
+      </section>
+
+      <!-- 09 · THINGS WE WILL NOT BUILD -->
+      <section id="not-build">
+        <p class="kicker">Short term &middot; What is decidedly out of scope</p>
+        <h2>Things we will not build.<br><span class="font-serif font-italic text-muted" style="font-size: 22pt; font-weight: 400;">A partial list.</span></h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px 56px; margin-top: 14px;">
+            <ul style="font-size: 19pt;">
+              <li><span class="strike">An Iceberg lakehouse</span></li>
+              <li><span class="strike">A Bronze / Silver / Gold pyramid</span></li>
+              <li><span class="strike">CDC streaming or Flink</span></li>
+              <li><span class="strike">SageMaker feature stores</span></li>
+              <li><span class="strike">A new analytical model</span></li>
+            </ul>
+            <ul style="font-size: 19pt;">
+              <li><span class="strike">Bedrock LLM explanations</span></li>
+              <li><span class="strike">Sub-10&nbsp;ms inference</span></li>
+              <li><span class="strike">Cash forecasting models</span></li>
+              <li><span class="strike">Per-customer AWS stacks</span></li>
+              <li><span class="strike">Anything with the letters A and I in it</span><span class="text-sm text-muted font-italic"> &nbsp;(yes, including aircraft)</span></li>
+            </ul>
+          </div>
+          <hr class="rule thick" style="margin: 24px 0 16px;">
+          <p class="text-xl text-center font-serif">
+            None of these has a named customer asking for it before June&nbsp;2027. <span class="text-oxblood font-italic">None.</span>
+          </p>
+        </div>
+        <aside class="notes">
+          The "partial list" subtitle is the joke. Don't oversell it. The list is the argument:
+          if nobody on the customer side is asking for any of this on the deadline horizon, none of it belongs on the deadline horizon.
+        </aside>
+      </section>
+
+      <!-- 10 · SHORT TERM DONE WHEN -->
+      <section id="short-done">
+        <p class="kicker">Short term &middot; Done when</p>
+        <h2>One sentence closes the horizon.</h2>
+        <div class="content" style="justify-content: center;">
+          <blockquote style="font-size: 30pt; border-left-color: var(--moss); border-left-width: 5px;">
+            <span class="text-moss font-italic">One customer in production</span> on the new analytics path &mdash; with a runbook a non-developer can execute, against a datamart that has zero write paths from the consumer side.
+          </blockquote>
+          <p class="text-lg text-muted font-italic font-serif text-center" style="margin-top: 28px;">
+            Before June 2027. Everything else can wait.
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 36px;">
+            <div class="stat">
+              <span class="stat-num oxblood">2</span>
+              <span class="stat-label">named pilots: Atlas Copco, UNICC</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">1</span>
+              <span class="stat-label">BI tool, end-to-end, before adding a second</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">0</span>
+              <span class="stat-label">write paths to the operational DB</span>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          The room will ask "how do we know we're done?" — this slide is the answer, written down.
+          The "1 BI tool" line is the one that prevents scope creep in March 2027 when somebody decides Power BI is also a hill we should die on.
+        </aside>
+      </section>
+
+      <!-- 11 · DIVIDER: MEDIUM TERM -->
+      <section id="div-medium" class="section-divider" data-state="is-section-divider">
+        <p class="act-num">Horizon 2 &middot; 2027 &rarr; 2028</p>
+        <h1>Medium term:<br><span class="text-petrol">earn the platform.</span></h1>
+        <p class="act-sub">Requirements before architecture. Decide build-vs-reuse with Quantum. Evolve the model where evidence &mdash; not enthusiasm &mdash; demands it.</p>
+      </section>
+
+      <!-- 12 · FOUR QUESTIONS -->
+      <section id="medium-questions">
+        <p class="kicker petrol">Medium term &middot; Four spikes, posed as questions</p>
+        <h2>Don't build a platform.<br>Answer four questions first.</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 12px;">
+            <div class="panel petrol">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 05 &middot; Evidence base</p>
+              <h3 style="margin: 6px 0 4px;">Which use cases justify investment?</h3>
+              <p>Consolidate Logi, LVMH/Allianz/SLB, Quantum, SCN, anomaly, Integrity. Rank. Each entry names a customer, a question, an owner, a freshness class.</p>
+            </div>
+            <div class="panel petrol">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 06 &middot; Thin slice</p>
+              <h3 style="margin: 6px 0 4px;">Is a Parquet export enough?</h3>
+              <p>Export the datamart to S3 Parquet, partitioned by date. Validate with Athena, Power BI, Superset. Measure cost. <em>Before</em> committing to Iceberg.</p>
+            </div>
+            <div class="panel petrol">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 07 &middot; Quantum fit/gap</p>
+              <h3 style="margin: 6px 0 4px;">Build, reuse, or integrate?</h3>
+              <p>One choice, in writing, signed: reuse Quantum &middot; integrate via Parquet handoff &middot; build PHUB-specific &middot; or pause. Two parallel platforms is the worst outcome.</p>
+            </div>
+            <div class="panel petrol">
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 08 &middot; Minimum viable model</p>
+              <h3 style="margin: 6px 0 4px;">What does the smallest defensible model look like?</h3>
+              <p>Every new fact and dimension cites: a customer report it enables, a gap it closes, an SME who signs the source-to-target.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          Each spike produces a decision artefact, not a doc. The Parquet thin slice in particular is "built code that we may not extend" — that is healthy engineering, not waste.
+        </aside>
+      </section>
+
+      <!-- 13 · THE THIN SLICE -->
+      <section id="thin-slice">
+        <p class="kicker petrol">Medium term &middot; The thin slice</p>
+        <h2>The most useful thing we can build right now<br>might also be the smallest.</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; margin-top: 14px; align-items: stretch;">
+            <div class="panel petrol" style="display: flex; flex-direction: column; justify-content: center;">
+              <p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;">The simplest viable path</p>
+              <pre class="font-mono" style="background: rgba(255,255,255,0.55); border-left: 3px solid var(--petrol); padding: 18px 22px; font-size: 15pt; line-height: 1.55; color: var(--petrol); margin: 0;">
+datamart  &rarr;  ETL  &rarr;  Parquet on S3
+                       (partitioned by date)
+                              &darr;
+                  SQL engine of customer's choice</pre>
+              <p class="text-sm text-muted font-italic" style="margin-top: 14px;">No Iceberg. No Bronze/Silver/Gold. No catalogue ceremony. Validate with Quantum DH, Athena, Power BI, QuickSight, Superset.</p>
+            </div>
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">After the thin slice, choose one</p>
+              <ol style="padding-left: 1.4em; margin-top: 8px;">
+                <li><strong>The export is enough</strong> &mdash; ship it. Half the room is quietly relieved.</li>
+                <li><strong>Align with Quantum.</strong> Reuse what's there.</li>
+                <li><strong>Build a dedicated lake</strong> (Horizon&nbsp;3), with evidence in hand.</li>
+              </ol>
+            </div>
+          </div>
+          <p class="text-center text-xl font-serif font-italic text-muted" style="margin-top: 22px;">
+            Maybe the answer was always a Parquet export. We will find out by building one.
+          </p>
+        </div>
+        <aside class="notes">
+          The dry punchline: the simplest possible answer might be the entire answer.
+          That is not a failure of ambition — that is a successful piece of evidence.
+        </aside>
+      </section>
+
+      <!-- 14 · MEDIUM TERM DONE WHEN -->
+      <section id="medium-done">
+        <p class="kicker petrol">Medium term &middot; Done when</p>
+        <h2>Horizon 2 closes when we can answer four questions in writing.</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 64px 1fr; gap: 18px 24px; align-items: start; margin-top: 16px;">
+            <p class="step-num text-petrol">01</p>
+            <div>
+              <p class="step-title">Which use cases justify investment?</p>
+              <p class="step-note">Ranked, named, owned. Not vibes.</p>
+            </div>
+            <p class="step-num text-petrol">02</p>
+            <div>
+              <p class="step-title">Is the Parquet export enough?</p>
+              <p class="step-note">Thin slice shipped. Real customer feedback in hand.</p>
+            </div>
+            <p class="step-num text-petrol">03</p>
+            <div>
+              <p class="step-title">Build, reuse, or integrate with Quantum?</p>
+              <p class="step-note">One option chosen, dated, signed by Architecture and Product.</p>
+            </div>
+            <p class="step-num text-petrol">04</p>
+            <div>
+              <p class="step-title">What is the minimum viable analytical model?</p>
+              <p class="step-note">SME-validated. Backward compatibility documented. Not exhaustive &mdash; minimum.</p>
+            </div>
+          </div>
+          <hr class="rule thick" style="margin: 22px 0 12px;">
+          <p class="text-center text-xl font-serif font-italic text-petrol">
+            Four answers earn Horizon 3. Anything less, we stay here.
+          </p>
+        </div>
+        <aside class="notes">
+          The closing line is the load-bearing one. Horizon 3 is not on a calendar — it is on a gate.
+        </aside>
+      </section>
+
+      <!-- 15 · DIVIDER: LONG TERM -->
+      <section id="div-long" class="section-divider" data-state="is-section-divider">
+        <p class="act-num">Horizon 3 &middot; 2028+</p>
+        <h1>Long term:<br><span class="text-muted">only if justified.</span></h1>
+        <p class="act-sub">The platform we may one day deserve. Two words do all the work here: <em>only if</em>.</p>
+      </section>
+
+      <!-- 16 · THE LAKE WE MAY DESERVE -->
+      <section id="lake">
+        <p class="kicker muted">Long term &middot; Receipts required</p>
+        <h2>The lake we may one day deserve.</h2>
+        <p class="deck">Six gates. Every platform commitment passes all six &mdash; or it doesn't ship. No exceptions, including for promising demos.</p>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 32px; margin-top: 6px;">
+            <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
+              <p class="step-num text-petrol">01</p>
+              <div>
+                <p class="step-title">Customer validation</p>
+                <p class="step-note">Named customers, named reports, documented end-to-end scenarios.</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
+              <p class="step-num text-petrol">02</p>
+              <div>
+                <p class="step-title">Simplest viable alternative</p>
+                <p class="step-note">Show why DM access or Parquet export is insufficient. Receipts required.</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
+              <p class="step-num text-petrol">03</p>
+              <div>
+                <p class="step-title">Maintainability</p>
+                <p class="step-note">Two engineers not involved in design can explain, support and change it.</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
+              <p class="step-num text-petrol">04</p>
+              <div>
+                <p class="step-title">Operational ownership</p>
+                <p class="step-note">OPS, PS/CX, Security, Product, Engineering &mdash; explicit, named, signed.</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
+              <p class="step-num text-petrol">05</p>
+              <div>
+                <p class="step-title">Cost &amp; commercial</p>
+                <p class="step-note">Per-customer cost tied to pricing or a funding line. No magic.</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
+              <p class="step-num text-petrol">06</p>
+              <div>
+                <p class="step-title">Freshness honesty</p>
+                <p class="step-note">Batch / hourly / near-real-time / synchronous separated. Real-time needs a named reason.</p>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 14px;">
+            <p class="stamp">Promising demos do not count</p>
+          </div>
+        </div>
+        <aside class="notes">
+          The stamp at the bottom-right is the only humour cue on this slide. Let it sit.
+          The point of the six gates is to make "no" easy to say without sounding like a no-person.
+        </aside>
+      </section>
+
+      <!-- 17 · AI/ML/MCP -->
+      <section id="ai-ml">
+        <p class="kicker muted">Long term &middot; AI &middot; ML &middot; MCP</p>
+        <h2>Discovery, not delivery.</h2>
+        <p class="deck">The vaguest section in the deck. That is honesty &mdash; not a lack of ambition.</p>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 14px;">
+            <div>
+              <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What we will do</p>
+              <ul>
+                <li>Pick <strong>one</strong> anomaly use case (unusual amount, beneficiary, country, or timing).</li>
+                <li>Try a <strong>statistical baseline first</strong> &mdash; the product already has SQL fraud patterns.</li>
+                <li>Define action, false-positive plan, explainability, audit, owner.</li>
+                <li>Scope a governed MCP / LLM spike against synthetic data.</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What we will not do</p>
+              <ul>
+                <li>Build SageMaker / Feature Store / model-serving infra.</li>
+                <li>Deploy CDC streaming for sub-10&nbsp;ms scoring.</li>
+                <li>Wire Bedrock into production paths.</li>
+                <li>Promise any AI capability to a customer, an RFP, or a sales deck.</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="rule thick" style="margin: 22px 0 14px;">
+          <blockquote style="font-size: 22pt; border-left-color: var(--muted-color); margin: 0;">
+            &ldquo;AI/ML&rdquo; is downstream of trustworthy data &mdash; <span class="text-muted">not the foundation for it.</span>
+          </blockquote>
+        </div>
+        <aside class="notes">
+          If anyone pushes for more detail here, ask them: which named customer or RFP needs this in 2026?
+          That single question is the entire test.
+        </aside>
+      </section>
+
+      <!-- 18 · THE ASK -->
+      <section id="the-ask">
+        <p class="kicker">The ask &middot; Four decisions, today</p>
+        <h2>What we need from this room.</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 10px;">
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 01</p>
+              <h3 style="margin: 4px 0;">Split the initiative into three tracks.</h3>
+              <p>Logi replacement, platform evolution, AI/ML. Separate scope, owners, funding, cadence.</p>
+            </div>
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 02</p>
+              <h3 style="margin: 4px 0;">Freeze the 5-phase architecture as reference.</h3>
+              <p>Long-term reference material, not the next sprint. No new build under it until gates pass.</p>
+            </div>
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 03</p>
+              <h3 style="margin: 4px 0;">Fund steps 1&ndash;4 + 12. This quarter.</h3>
+              <p>Read-only DM access, BI POC, runbook, pilots, synthetic dataset. Named owners. Real dates.</p>
+            </div>
+            <div class="panel oxblood">
+              <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 04</p>
+              <h3 style="margin: 4px 0;">Adopt the six gates as policy.</h3>
+              <p>Nothing crosses from Horizon&nbsp;2 to Horizon&nbsp;3 without all six. No exceptions, including for promising demos.</p>
+            </div>
+          </div>
+          <blockquote style="margin-top: 20px; font-size: 19pt; border-left-color: var(--petrol);">
+            We are not anti-platform. We are pro-customer, pro-deadline, and pro-team-that-can-maintain-the-thing-they-built.
+            <cite>&mdash; the bottom line.</cite>
+          </blockquote>
+        </div>
+        <aside class="notes">
+          Read the four decisions slowly. Look at the relevant leader for each one. Then read the quote.
+          Don't add new arguments — by this slide the argument is over and we are collecting signatures.
+        </aside>
+      </section>
+
+      <!-- 19 · CLOSING -->
+      <section id="closing" class="section-divider" data-state="is-section-divider">
+        <p class="act-num">Closing</p>
+        <h1>First keep customers whole.<br><span class="text-oxblood">Then earn the right</span><br>to build the platform.</h1>
+        <p class="act-sub">Tactical delivery now &middot; discovery in parallel &middot; platform investment only when the evidence demands it &middot; AI/ML when the data is ready to support it.</p>
+        <p class="footnote" style="margin-top: 36px;">Questions &middot; discussion &middot; alignment</p>
+        <aside class="notes">
+          Reprise of the title. Sit with it. Open the floor.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: 'c/t',
+      hash: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      center: false,
+      plugins: [ RevealChart ],
+      chart: {
+        defaults: Object.assign({
+          color: 'rgba(0, 0, 0, 0.8)',
+          borderColor: 'rgba(0, 0, 0, 0.8)',
+          devicePixelRatio: 2
+        }, window.location.search.includes('export') ? { animation: false } : {})
+      }
+    });
+  </script>
+</body>
+</html>

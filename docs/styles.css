@@ -1,0 +1,402 @@
+/* Trax Analytics — A Defensible Roadmap
+ * Editorial theme: FT-salmon paper, ink type, oxblood urgency, petrol "way forward".
+ * Reads like a long-form op-ed broken into beats. One thing per slide.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* ===========================================
+   CSS VARIABLES
+   =========================================== */
+:root {
+  /* Backgrounds — FT salmon for content, deeper salmon for dividers */
+  --background-color: #FBF0E1;
+  --section-divider-bg: #F4E2C9;
+  --panel-bg: #F6E6D2;
+  --panel-bg-soft: #F9EBD7;
+  --rule-color: #2A1A14;
+
+  /* Typography */
+  --heading-font: "Source Serif 4", Georgia, serif;
+  --body-font: "Inter", Helvetica, sans-serif;
+  --mono-font: "IBM Plex Mono", "Courier New", monospace;
+  --base-font-size: 32px;
+  --text-size: 17pt;
+  --h1-size: 60pt;
+  --h2-size: 36pt;
+  --h3-size: 22pt;
+  --footnote-size: 11pt;
+
+  /* Colors */
+  --ink: #1A1410;            /* Headlines, primary text */
+  --ink-soft: #2D241C;       /* Body */
+  --oxblood: #7A1F2A;        /* Urgency, the burning deadline */
+  --oxblood-soft: #9E3242;
+  --petrol: #1F4E60;         /* Way forward, sane engineering */
+  --petrol-soft: #2E6A7E;
+  --moss: #4A6B3A;           /* Done, validated */
+  --primary-color: var(--oxblood);
+  --secondary-color: var(--petrol);
+  --text-color: var(--ink-soft);
+  --muted-color: #6B5B4A;
+  --dim-color: #9A8773;
+  --line-color: #C8B49A;
+
+  /* Layout */
+  --slide-padding: 64px;
+  --slide-padding-top: 44px;
+  --content-gap: 28px;
+  --box-radius: 0px;          /* Sharp corners — editorial */
+}
+
+/* ===========================================
+   BASE
+   =========================================== */
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.reveal-viewport {
+  background-color: var(--background-color);
+}
+
+.reveal-viewport.is-section-divider .slide-background.present {
+  background-color: var(--section-divider-bg) !important;
+}
+
+.reveal strong, .reveal b { font-weight: 600; color: var(--ink); }
+.reveal em, .reveal i { font-style: italic; }
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--heading-font);
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 18px; }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p, .reveal li {
+  font-size: var(--text-size);
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin: 0 0 12px 0;
+}
+
+.reveal ul, .reveal ol { margin: 0; padding-left: 1.1em; }
+.reveal ul li, .reveal ol li { margin-bottom: 8px; }
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { position: relative; padding-left: 18px; }
+.reveal ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--oxblood);
+  font-weight: 600;
+}
+
+/* ===========================================
+   SLIDE LAYOUT
+   =========================================== */
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: var(--slide-padding-top) var(--slide-padding) 36px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.reveal .slides section .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Section dividers — large, centered, editorial cover-page feel */
+.reveal .slides section.section-divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px var(--slide-padding);
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 64pt;
+  line-height: 1.02;
+  margin-bottom: 24px;
+}
+
+.reveal .slides section.section-divider .act-num {
+  font-family: var(--mono-font);
+  font-size: 12pt;
+  letter-spacing: 0.22em;
+  color: var(--oxblood);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.reveal .slides section.section-divider .act-sub {
+  font-family: var(--heading-font);
+  font-style: italic;
+  font-size: 22pt;
+  color: var(--muted-color);
+  max-width: 90%;
+  margin-top: 24px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+/* ===========================================
+   EDITORIAL ELEMENTS
+   =========================================== */
+
+/* The masthead / slide tag — like a newspaper kicker */
+.kicker {
+  font-family: var(--mono-font);
+  font-size: 11pt;
+  letter-spacing: 0.22em;
+  color: var(--oxblood);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.kicker.petrol { color: var(--petrol); }
+.kicker.muted { color: var(--muted-color); }
+.kicker.ink { color: var(--ink); }
+
+.kicker::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-color);
+}
+
+.kicker.no-rule::after { display: none; }
+
+/* Deck (sub-headline under the H2) */
+.reveal .deck {
+  font-family: var(--heading-font);
+  font-style: italic;
+  font-size: 19pt;
+  color: var(--muted-color);
+  line-height: 1.35;
+  margin-top: -4px;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+/* Pull quote / lede */
+.reveal .lede {
+  font-family: var(--heading-font);
+  font-size: 28pt;
+  line-height: 1.25;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 12px 0;
+}
+
+.reveal .lede em { color: var(--oxblood); font-style: italic; }
+
+/* Big editorial number — for cold-open style stats */
+.reveal .bignum {
+  font-family: var(--heading-font);
+  font-size: 130pt;
+  line-height: 0.9;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.reveal .bignum.oxblood { color: var(--oxblood); }
+
+/* Smaller stat */
+.reveal .stat {
+  border-top: 2px solid var(--ink);
+  padding-top: 10px;
+}
+.reveal .stat .stat-num {
+  font-family: var(--heading-font);
+  font-size: 56pt;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  display: block;
+}
+.reveal .stat .stat-num.oxblood { color: var(--oxblood); }
+.reveal .stat .stat-num.petrol { color: var(--petrol); }
+.reveal .stat .stat-label {
+  font-family: var(--mono-font);
+  font-size: 10pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+  margin-top: 8px;
+  display: block;
+  line-height: 1.4;
+}
+
+/* Panels — soft tinted backgrounds for visual grouping */
+.panel {
+  background: var(--panel-bg);
+  padding: 22px 26px;
+  border-left: 3px solid var(--ink);
+}
+.panel.oxblood { border-left-color: var(--oxblood); background: #F9E4DC; }
+.panel.petrol { border-left-color: var(--petrol); background: #E8EEF0; }
+.panel.moss { border-left-color: var(--moss); background: #ECEFE2; }
+.panel.dim { border-left-color: var(--dim-color); background: var(--panel-bg-soft); }
+
+.panel h3 {
+  font-size: 18pt;
+  margin-bottom: 8px;
+}
+.panel p, .panel li { font-size: 14pt; line-height: 1.4; margin-bottom: 6px; }
+
+/* The "step" card — for roadmap epic enumerations */
+.reveal .step {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-color);
+}
+.reveal .step:last-child { border-bottom: 1px solid var(--line-color); }
+.reveal .step-num {
+  font-family: var(--mono-font);
+  font-size: 20pt;
+  font-weight: 600;
+  color: var(--oxblood);
+  line-height: 1;
+  margin: 0;
+}
+.reveal .step-title {
+  font-family: var(--heading-font);
+  font-size: 17pt;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 4px 0;
+}
+.reveal .step-meta {
+  font-family: var(--mono-font);
+  font-size: 10pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+  margin: 0;
+}
+.reveal .step-note {
+  font-size: 13pt;
+  color: var(--muted-color);
+  margin: 0;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+/* Blockquotes — editorial pull-quote */
+.reveal blockquote {
+  font-family: var(--heading-font);
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-left: 4px solid var(--oxblood);
+  padding: 8px 0 8px 22px;
+  margin: 18px 0;
+  font-style: italic;
+  font-size: 24pt;
+  line-height: 1.3;
+  color: var(--ink);
+  font-weight: 400;
+  width: 100%;
+}
+.reveal blockquote cite {
+  display: block;
+  font-family: var(--body-font);
+  font-style: normal;
+  font-size: 13pt;
+  color: var(--muted-color);
+  margin-top: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* "Stamp" — visual gag, looks rubber-stamped on the page */
+.reveal .stamp {
+  display: inline-block;
+  font-family: var(--mono-font);
+  font-size: 14pt;
+  font-weight: 600;
+  color: var(--oxblood);
+  border: 2.5px solid var(--oxblood);
+  padding: 6px 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+.reveal .stamp.petrol { color: var(--petrol); border-color: var(--petrol); }
+.reveal .stamp.moss { color: var(--moss); border-color: var(--moss); }
+
+/* Horizontal rule, editorial */
+.rule {
+  border: none;
+  border-top: 1px solid var(--line-color);
+  margin: 20px 0;
+}
+.rule.thick { border-top: 2px solid var(--ink); }
+
+/* Footnote */
+.footnote {
+  font-family: var(--mono-font);
+  font-size: 10pt;
+  color: var(--muted-color);
+  letter-spacing: 0.06em;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+/* ===========================================
+   COLOR & TEXT UTILITIES
+   =========================================== */
+.text-oxblood { color: var(--oxblood) !important; }
+.text-petrol { color: var(--petrol) !important; }
+.text-moss { color: var(--moss) !important; }
+.text-muted { color: var(--muted-color) !important; }
+.text-dim { color: var(--dim-color) !important; }
+.text-ink { color: var(--ink) !important; }
+
+.text-sm { font-size: 13pt; }
+.text-lg { font-size: 19pt; }
+.text-xl { font-size: 22pt; }
+.text-2xl { font-size: 26pt; }
+.text-3xl { font-size: 32pt; }
+.text-4xl { font-size: 40pt; }
+
+.font-serif { font-family: var(--heading-font); }
+.font-mono { font-family: var(--mono-font); }
+.font-italic { font-style: italic; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.strike { text-decoration: line-through; text-decoration-color: var(--oxblood); text-decoration-thickness: 2px; }
+
+/* No bullet — for lists that don't want the em-dash marker */
+ul.no-bullet li { padding-left: 0; }
+ul.no-bullet li::before { display: none; }
