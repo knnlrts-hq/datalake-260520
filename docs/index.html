@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Trax Analytics &mdash; A Defensible Roadmap</title>
+<html lang="en" class=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Trax Analytics — A Defensible Roadmap</title>
 <!-- Reveal.js core -->
-<link href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" rel="stylesheet">
 <!-- Font Awesome for icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 <!-- Custom styles -->
-<link href="styles.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet">
 <!-- Chart.js for data visualization -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -18,28 +18,28 @@
 <div class="slides">
 <!-- 01 · TITLE -->
 <section class="section-divider" data-state="is-section-divider" id="title">
-<p class="act-num">An Internal Working Session &middot; May 2026</p>
-<h1>Trax Analytics.<br/><span class="text-oxblood">A realistic roadmap.</span></h1>
-<p class="act-sub">Existing customers first. Logi-equivalent analytics on the day Logi turns off. Datalake only when named customer use cases demand it.</p>
-<p class="footnote">Development &middot; Product Management &middot; Professional Services &middot; Presales</p>
+<p class="act-num">An Internal Working Session · May 2026</p>
+<h1>Trax Data Analytics.<br><span class="text-oxblood">A realistic roadmap.</span></h1>
+<p class="act-sub">Focus on Logi-enabled customers first. Deliver equivalent analytics functionality when Logi turns off. Then agree on concrete use cases to drive a datalake service</p>
+<p class="footnote">Development · Product Management · Professional Services · Presales</p>
 <aside class="notes">
-          Open quietly. The argument doesn't need volume. Read the second line out loud and let it sit for a beat &mdash;
+          Open quietly. The argument doesn't need volume. Read the second line out loud and let it sit for a beat —
           the rest of the deck is just the proof, the steps, and the price of not doing it.
         </aside>
 </section>
 <!-- 02 · THE CLOCK -->
-<section id="clock">
+<section id="clock" class="">
 <p class="kicker">The DEADLINE</p>
 <div class="content" style="justify-content: center;">
 <div style="display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center;">
 <div>
 <p class="font-mono text-sm text-muted" style="letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px;">Logi license sunset</p>
 <p class="bignum oxblood">Jun&nbsp;'27</p>
-<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.18em; text-transform: uppercase; margin-top: 12px;">13 months &middot; 4 quarters</p>
+<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.18em; text-transform: uppercase; margin-top: 12px;">13 months · 4 quarters</p>
 </div>
 <div>
-<p class="lede" style="margin-bottom: 22px;">This is not a roadmap horizon.<br/>It is a <em>contractual cliff</em>.</p>
-<hr class="rule" style="margin: 22px 0;"/>
+<p class="lede" style="margin-bottom: 22px;">This is not a roadmap horizon.<br>It is a <em>contractual cliff</em>.</p>
+<hr class="rule" style="margin: 22px 0;">
 <p class="text-lg">Every Payment Hub customer using Logi must have a supported analytics path on the day Logi turns off. That sentence is the only non-negotiable in this deck.</p>
 </div>
 </div>
@@ -50,65 +50,65 @@
         </aside>
 </section>
 <!-- 04 · THE GAP -->
-<section id="gap">
-<p class="kicker">The current gap &middot; Ask vs. answer</p>
-<h2>What was asked. What was answered.</h2>
+<section id="gap" class="">
+<p class="kicker">The current gap · Ask vs. answer</p>
+<h2>High-level requirements vs low-level architecture</h2>
 <div class="content">
 <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 32px; margin-top: 8px; align-items: stretch;">
 <div class="panel petrol" style="display: flex; flex-direction: column;">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">The 06/25 business case asks for:</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">06/25 business case asks for:</p>
 <p class="font-serif font-italic" style="font-size: 20pt; line-height: 1.35; color: var(--ink);">
-                &ldquo;Export Payment Hub data (on demand or scheduled) so clients can build reports in their own tools, eventually combinable with Quantum.&rdquo;
+                “Export Payment Hub data (on demand or scheduled) so clients can build reports in their own tools, eventually combinable with Quantum.”
               </p>
 <div style="margin-top: auto; padding-top: 18px;">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">1 sentence &middot; 1 outcome</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Way too high-level · Underlying Focus on Logi replacement</p>
 </div>
 </div>
-<div class="panel oxblood" style="display: flex; flex-direction: column;"><p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">The 05/26 architecture answers with:</p>
+<div class="panel oxblood" style="display: flex; flex-direction: column;"><p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">05/26 architecture answers with:</p>
 <p style="font-size: 13.5pt; line-height: 1.55;">
-                Per-customer AWS lakehouses &middot; Apache Iceberg &middot; Bronze / Silver / Gold medallion &middot; Lake Formation governance &middot; SageMaker ML pipelines &middot; sub-5&nbsp;ms anomaly scoring &middot; Bedrock LLM explanations &middot; CDC streaming &middot; sub-10&nbsp;ms inference &middot; cash forecasting &middot; cost tiering &middot; DR &middot; IAM &middot; observability.
+                Per-customer AWS lakehouses · Apache Iceberg · Bronze / Silver / Gold medallion ETL process · Lake Formation governance · SageMaker ML pipelines · sub-5&nbsp;ms anomaly scoring · Bedrock LLM explanations · CDC streaming · sub-10&nbsp;ms inference · cash forecasting · cost tiering · DR · IAM · observability.
               </p>
 <div style="margin-top: auto; padding-top: 18px;">
-<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">14+ architectural commitments &middot; 0 named customers</p>
+<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;"><span style="font-family: &quot;IBM Plex Mono&quot;, &quot;Courier New&quot;, monospace; font-size: 18.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 2.61333px;">Way too low-level ·&nbsp;</span>14+ architectural commitments · 0 named customers</p>
 </div>
 </div>
 </div>
-<hr class="rule thick" style="margin: 24px 0 12px;"/>
+<hr class="rule thick" style="margin: 24px 0 12px;">
 <p class="text-center text-xl font-serif font-italic">
-<span class="text-oxblood">Two to three orders of magnitude apart.</span> <span class="text-muted">Same room. Same project. Same year.</span></p>
+<span class="text-oxblood">These things are two to three orders of magnitude apart.</span> <span class="text-muted">Who is aligning these things?</span></p>
 </div>
 <aside class="notes">
           Let the visual asymmetry do the talking. The left box is a single sentence. The right box is a shopping list.
           The footers carry the real punch: "1 sentence, 1 outcome" against "14+ commitments, 0 named customers."
-          The point is not that the right side is wrong &mdash; it is that nobody asked for it yet.
+          The point is not that the right side is wrong — it is that nobody asked for it yet.
         </aside>
 </section>
 <!-- 05 · FOUR PROBLEMS -->
-<section id="four-problems">
-<p class="kicker">Four problems, rolled into one</p>
+<section id="four-problems" class="">
+<p class="kicker">Four problems, mixed into one</p>
 <h2>Four problems. Four clocks. One initiative.</h2>
-<p class="deck">Each problem has its own deadline, its own evidence bar, and its own owner. Solving them in one architecture is exactly how we end up with a system nobody can operate.</p>
+<p class="deck">These problems are not the same. Each should have its own track and milestones. Prematurely solving them in one architecture is how we end up with an unmaintainable system that nobody can operate.</p>
 <div class="content">
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
 <div class="panel oxblood">
-<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 1 &middot; <span style="font-weight: 700;">Clock: Jun 2027</span></p>
-<h3 style="margin: 6px 0;">Logi license replacement</h3>
+<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 1 · <span style="font-weight: 700;">Clock: Jun 2027</span></p>
+<h3 style="margin: 6px 0;">Logi analytics replacement</h3>
 <p>A supported analytics path the day Logi turns off. <strong>Contractual. Non-negotiable.</strong> Named customers, named dashboards, fixed date.</p>
 </div>
 <div class="panel petrol">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 2 &middot; Clock: in flight</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 2 · Clock: in flight</p>
 <h3 style="margin: 6px 0;">Customer self-service data access</h3>
 <p>Clients want to query Payment Hub data in their own BI tools. The datamart has gaps, but it exists today and already covers ~95% of <strong>analytics</strong> use cases.</p>
 </div>
 <div class="panel dim">
-<p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 3 &middot; Clock: 2028+</p>
+<p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 3 · Clock: 2028+</p>
 <h3 style="margin: 6px 0;">A datalake for advanced &amp; cross-product analytics</h3>
-<p>A new datalake&nbsp;<em>may</em> be needed for combined Payment Hub + Quantum analytics. Build, reuse, or interop — undecided.</p>
+<p>A new datalake&nbsp;<em>may</em> be needed for combined Payment Hub + Quantum analytics. Build, reuse, or interop.&nbsp;<span style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 600; font-size: 18.6667px; font-family: Inter, Helvetica, sans-serif; color: rgb(26, 20, 16);">Zero named customers. Zero customer-validated use cases.</span><span style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 18.6667px; font-family: Inter, Helvetica, sans-serif;">&nbsp;</span></p>
 </div>
 <div class="panel dim">
-<p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 4 &middot; Clock: none yet</p>
-<h3 style="margin: 6px 0;">AI &middot; ML &middot; Anomaly detection &middot; forecasting</h3>
-<p><strong>Zero named customers. Zero labelled datasets. Zero validated use cases.</strong> Hot in RFPs and demos &mdash; nobody asking by name.</p>
+<p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase;">Problem 4 · Clock: none yet</p>
+<h3 style="margin: 6px 0;">AI · ML · Anomaly detection · forecasting</h3>
+<p>Hot in RFPs and demos — nobody asking by name.&nbsp;<span style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 600; font-size: 18.6667px; font-family: Inter, Helvetica, sans-serif; color: rgb(26, 20, 16);">Zero named customers. Zero labelled datasets. Zero customer-validated use cases.</span><span style="font-family: Inter, Helvetica, sans-serif; font-size: 18.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;">&nbsp;</span></p>
 </div>
 </div>
 </div>
@@ -118,9 +118,9 @@
         </aside>
 </section>
 <!-- 06 · THE FRAME (visual timeline) -->
-<section id="frame">
+<section id="frame" class="">
 <p class="kicker">The roadmap on a single page</p>
-<h2>Three horizons. One deadline. One picture.</h2>
+<h2>Three horizons. One deadline.</h2>
 <div class="content">
 <div class="timeline" style="margin-top: 18px;">
 <!-- Top time axis -->
@@ -135,7 +135,7 @@
 </div>
 <div class="timeline-axis-label" style="text-align: right;">
 <p class="font-mono text-sm text-muted">2028+</p>
-<p class="text-sm text-muted font-italic">earned, if at all</p>
+<p class="text-sm text-muted font-italic">validate use cases</p>
 </div>
 </div>
 <!-- Vertical "Jun '27" cliff line -->
@@ -145,7 +145,7 @@
 <div class="timeline-lane-label">
 <p class="font-mono text-sm text-oxblood" style="font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Horizon 1</p>
 <p class="font-serif" style="font-size: 16pt; color: var(--ink); margin-top: 2px; font-weight: 600;">Logi replacement</p>
-<p class="text-sm text-muted font-italic">deliver &middot; weeks</p>
+<p class="text-sm text-muted font-italic">deliver · weeks</p>
 </div>
 <div class="timeline-track">
 <div class="timeline-bar oxblood" style="left: 0; width: 49%;"></div>
@@ -160,12 +160,12 @@
 <div class="timeline-lane-label">
 <p class="font-mono text-sm text-petrol" style="font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Horizon 2</p>
 <p class="font-serif" style="font-size: 16pt; color: var(--ink); margin-top: 2px; font-weight: 600;">Datalake discovery</p>
-<p class="text-sm text-muted font-italic">validate &middot; quarters</p>
+<p class="text-sm text-muted font-italic">validate · quarters</p>
 </div>
 <div class="timeline-track">
 <div class="timeline-bar petrol" style="left: 20%; width: 60%;"></div>
-<div class="timeline-milestone" style="left: 25%;"><span class="dot petrol"></span><p>Use-case rank</p></div>
-<div class="timeline-milestone" style="left: 40%;"><span class="dot petrol"></span><p>Thin slice</p></div>
+<div class="timeline-milestone" style="left: 25%;"><span class="dot petrol"></span><p>Use-case ranking</p></div>
+<div class="timeline-milestone" style="left: 40%;"><span class="dot petrol"></span><p>Parquet export</p></div>
 <div class="timeline-milestone" style="left: 58%;"><span class="dot petrol"></span><p>Build vs reuse</p></div>
 <div class="timeline-milestone" style="left: 73%;"><span class="dot petrol"></span><p>Min. model</p></div>
 </div>
@@ -174,8 +174,8 @@
 <div class="timeline-lane">
 <div class="timeline-lane-label">
 <p class="font-mono text-sm text-muted" style="font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Horizon 3</p>
-<p class="font-serif" style="font-size: 16pt; color: var(--ink); margin-top: 2px; font-weight: 600;">AI / ML / lake</p>
-<p class="text-sm text-muted font-italic">earn &middot; open-ended</p>
+<p class="font-serif" style="font-size: 16pt; color: var(--ink); margin-top: 2px; font-weight: 600;">AI / ML / anomaly detection</p>
+<p class="text-sm text-muted font-italic">earn · open-ended</p>
 </div>
 <div class="timeline-track">
 <div class="timeline-bar dim" style="left: 60%; width: 38%;"></div>
@@ -184,28 +184,28 @@
 </div>
 </div>
 </div>
-<hr class="rule thick" style="margin: 20px 0 10px;"/>
+<hr class="rule thick" style="margin: 20px 0 10px;">
 <p class="text-center text-lg font-serif font-italic text-muted">
-            One deadline track. One discovery track. One platform &mdash; only when use cases earn it.
+            One deadline track. One discovery track. Advanced data platform only when critical use cases earn it.
           </p>
 </div>
 <aside class="notes">
-          This is the page they should take a photo of. The vertical line is Jun '27 &mdash; everything to the left of it
+          This is the page they should take a photo of. The vertical line is Jun '27 — everything to the left of it
           is contractually committed; everything to the right of it is conditional on evidence.
           The color vocabulary starts here: oxblood = urgent, petrol = discovery, muted = earned, later, maybe.
         </aside>
 </section>
 <!-- 07 · DIVIDER: SHORT TERM -->
 <section class="section-divider" data-state="is-section-divider" id="div-short">
-<p class="act-num">Horizon 1 &middot; Now &rarr; June 2027</p>
-<h1>Short term:<br/><span class="text-oxblood">Focus on existing customers.</span></h1>
+<p class="act-num">Horizon 1 · Now → June 2027</p>
+<h1>Short term:<br><span class="text-oxblood">Focus on existing customers.</span></h1>
 <p class="act-sub">One outcome: when Logi turns off, nothing breaks. Everything else is downstream of this.</p>
 <aside class="notes">
           This is the section the room must agree on before any other decision matters. Slow down.
         </aside>
 </section>
 <!-- 08 · THE FIVE STEPS -->
-<section id="short-steps">
+<section id="short-steps" class="">
 <p class="kicker">Short term</p>
 <h2>Concrete. Sequenced. Customer-facing.</h2>
 <div class="content">
@@ -216,7 +216,7 @@
 <p class="step-title">Read-only (VPN) access to datamart tables</p>
 <p class="step-note">3 types: FIS-managed AWS, customer-managed AWS, or self-hosted. AWS VPN client pending CIO review.</p>
 </div>
-<p class="step-meta">dev + OPS &middot; 4-8 wks</p>
+<p class="step-meta">dev + OPS · 4-8 wks</p>
 </div>
 <div class="step">
 <p class="step-num">02</p>
@@ -224,43 +224,43 @@
 <p class="step-title">Logi analytics dashboards reproduction in a BI tool</p>
 <p class="step-note">Choice: Power BI / QuickSight /&nbsp;<span style="font-family: Inter, Helvetica, sans-serif; font-size: 17.3333px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;">Superset</span>. Classify every gap. Findings drive the medium term.</p>
 </div>
-<p class="step-meta">DEV &middot; 4 wks</p>
+<p class="step-meta">DEV · 4 wks</p>
 </div>
 <div class="step">
 <p class="step-num">03</p>
 <div>
 <p class="step-title">Operationalisation &amp; runbook - the boring epic that saves us</p>
-<p class="step-note">Version matrix. PS-executable handoff. No heroes.</p>
+<p class="step-note">Version matrix. PS-executable handoff. No development heroes involved.</p>
 </div>
-<p class="step-meta">DEV + PS + OPS &middot; 4-8 wks</p>
+<p class="step-meta">DEV + PS + OPS · 4-8 wks</p>
 </div>
 <div class="step">
 <p class="step-num">04</p>
 <div>
-<p class="step-title">Pilot: Atlas Copco &amp; UNICC</p>
+<p class="step-title">Pilots: Atlas Copco &amp; UNICC</p>
 <p class="step-note">PS/CX-led UAT. Note that real customers WILL find the gaps that a hundred internal rehearsals never will.</p>
 </div>
-<p class="step-meta">PS/CX + PM &middot; 8-12 wks</p>
+<p class="step-meta">PS/CX + PM · 8-12 wks</p>
 </div>
 <div class="step">
 <p class="step-num">05</p>
 <div>
-<p class="step-title">Build a realistic synthetic dataset</p>
-<p class="step-note">Realistic, edge-case-rich seed data, starting from and improving the existing "historical data" dataset. This de-risks every other step and allows for real-life experiments.</p>
+<p class="step-title">Build / improve a realistic synthetic dataset</p>
+<p class="step-note">Realistic, edge-case-rich seed data, starting from and improving the existing "historical data" dataset. This de-risks every other step and allows for realistic production-like experiments.</p>
 </div>
-<p class="step-meta">DEV &middot; ongoing</p>
+<p class="step-meta">DEV · ongoing</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-          Don't read every row. Highlight #03 (the boring one &mdash; it decides whether we ship)
+          Don't read every row. Highlight #03 (the boring one — it decides whether we ship)
           and #12 (the synthetic dataset is the leverage move; it pays for itself by Q2).
         </aside>
 </section>
 <!-- 09 · THINGS WE WILL NOT BUILD -->
-<section id="not-build">
-<p class="kicker">Short term &middot; What is decidedly out of scope</p>
-<h2>Things we will not build.<br/><span class="font-serif font-italic text-muted" style="font-size: 22pt; font-weight: 400;">A partial list.</span></h2>
+<section id="not-build" class="">
+<p class="kicker">Short term · What is decidedly out of scope</p>
+<h2>Things we will not start building today.<br><span class="font-serif font-italic text-muted" style="font-size: 22pt; font-weight: 400;">A partial list.</span></h2>
 <div class="content">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px 56px; margin-top: 14px;">
 <ul style="font-size: 19pt;">
@@ -278,7 +278,7 @@
 <li><span class="strike">New analytics dashboards</span></li>
 </ul>
 </div>
-<hr class="rule thick" style="margin: 24px 0 16px;"/>
+<hr class="rule thick" style="margin: 24px 0 16px;">
 <p class="text-xl text-center font-serif">
             None of these have any named customer asking for it... Do they?</p>
 </div>
@@ -288,7 +288,7 @@
         </aside>
 </section>
 <!-- 10 · SHORT TERM DONE WHEN -->
-<section id="short-done">
+<section id="short-done" class="">
 <p class="kicker">Short term</p>
 <h2>Definition of done.</h2>
 <div class="content" style="justify-content: center;">
@@ -296,8 +296,7 @@
 <span class="text-moss font-italic">One customer in production</span> with their own BI tool on the new analytics path, with a runbook a non-developer can execute, against read-only datamart tables from the consumer side.
           </blockquote>
 <p class="text-lg text-muted font-italic font-serif text-center" style="margin-top: 28px;">
-            Before June 2027. Everything else can wait.
-          </p>
+            Ideally 6-8 months before June 2027 deadline.</p>
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 36px;">
 <div class="stat">
 <span class="stat-num oxblood">2</span>
@@ -305,95 +304,95 @@
 </div>
 <div class="stat">
 <span class="stat-num">1</span>
-<span class="stat-label">BI tool, end-to-end, before adding a second</span>
+<span class="stat-label">external BI tool, end-to-end, before adding a second</span>
 </div>
 </div>
 </div>
 <aside class="notes">
-          The room will ask "how do we know we're done?" &mdash; this slide is the answer, written down.
+          The room will ask "how do we know we're done?" — this slide is the answer, written down.
           The "1 BI tool" line is the one that prevents scope creep in March 2027 when somebody decides Power BI is also a hill we should die on.
         </aside>
 </section>
 <!-- 11 · DIVIDER: MEDIUM TERM -->
 <section class="section-divider" data-state="is-section-divider" id="div-medium">
-<p class="act-num">Horizon 2 &middot; 2027 &rarr; 2028</p>
-<h1>Medium term:<br/><font color="#1f4e60">Datalake; yes! Which use cases?</font></h1>
-<p class="act-sub">Requirements before architecture. Decide build-vs-reuse strategy and responsibilities with Quantum. Evolve the analytical schema where evidence - not enthusiasm - demands it.</p>
+<p class="act-num">Horizon 2 · 2027 → 2028</p>
+<h1>Medium term:<br><font color="#1f4e60">Datalake; yes! Which use cases?</font></h1>
+<p class="act-sub">Validated requirements before architecture. Decide build-vs-reuse strategy and responsibilities with Quantum datalake. Only evolve our internal analytical schema where evidence - not enthusiasm - demands it.</p>
 </section>
 <!-- 12 · FOUR QUESTIONS -->
-<section id="medium-questions">
-<p class="kicker petrol">Medium term &middot; Four spikes, posed as questions</p>
-<h2>Let's not prematurely optimize.<br/>Answer four questions first.</h2>
+<section id="medium-questions" class="">
+<p class="kicker petrol">Medium term · Four spikes, posed as questions</p>
+<h2>Let's not prematurely optimize.&nbsp;Answer 4 questions first.</h2>
 <div class="content">
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 12px;">
 <div class="panel petrol">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 01 &middot; Evidence base</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 01 · Evidence base</p>
 <h3 style="margin: 6px 0 4px;">Which use cases justify investment?</h3>
 <p>Consolidate feedback from customers (Product Management), competitive analysis (Presales), look into internal initiatives like AF, Integrity datalake, etc. Rank. Each use case has a named customer and answers a real need.</p>
 </div>
 <div class="panel petrol">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 02 &middot; Thin slice</p>
-<h3 style="margin: 6px 0 4px;">Is a simple Parquet export enough?</h3>
-<p>Export the datamart tables to a Parquet file and store it on S3, partitioned by date. Validate with Quantum. Measure cost. <em>Before</em> committing to our own solution.</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 02 · Thin slice</p>
+<h3 style="margin: 6px 0 4px;">Is a simple Parquet export already enough?</h3>
+<p>Export the datamart tables to a Parquet file and store it on S3, partitioned by date. Validate with Quantum. Measure operational and maintenance costs. <em>Before</em> committing to our own solution.</p>
 </div>
 <div class="panel petrol">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 03 &middot; Quantum fit/gap</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 03 · Quantum fit/gap</p>
 <h3 style="margin: 6px 0 4px;">Build, reuse, integrate, or pause?</h3>
-<p>One choice, in writing, signed off between dev and PM across both PH and Quantum. Two or more parallel data lake solutions are the worst outcome.</p>
+<p>One choice, in writing, signed off between DEV and PM across both PH and Quantum. Two or more parallel data lake solutions are the worst outcome vis-a-vis the competition.</p>
 </div>
 <div class="panel petrol">
-<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 04 &middot; Minimum viable analytics model</p>
-<h3 style="margin: 6px 0 4px;">What does the smallest defensible model look like?</h3>
-<p>Every new fact and dimension cites: a customer report it enables, and a gap it closes.</p>
+<p class="font-mono text-sm text-petrol" style="letter-spacing: 0.14em; text-transform: uppercase;">Spike 04 · Minimum viable analytics model</p>
+<h3 style="margin: 6px 0 4px;">What does the smallest defensible analytical schema/model look like?</h3>
+<p>Every new fact and dimension must cite a customer-validated report it enables, and/or a gap it closes.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-          Each spike produces a decision artefact, not a doc. The Parquet thin slice in particular is "built code that we may not extend" &mdash; that is healthy engineering, not waste.
+          Each spike produces a decision artefact, not a doc. The Parquet thin slice in particular is "built code that we may not extend" — that is healthy engineering, not waste.
         </aside>
 </section>
 <!-- 13 · THE THIN SLICE -->
-<section id="thin-slice">
-<p class="kicker petrol">Medium term &middot; The thin(nest) slice</p>
-<h2>The most useful thing we can build may&nbsp;also be the smallest.</h2>
+<section id="thin-slice" class="">
+<p class="kicker petrol">Medium term · The thin(nest) slice</p>
+<h2>The most useful thing to build may be the smallest.</h2>
 <div class="content">
 <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; margin-top: 14px; align-items: stretch;">
 <div class="panel petrol" style="display: flex; flex-direction: column; justify-content: center;">
 <p class="font-mono text-sm text-muted" style="letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;">The simplest viable path</p>
-<pre class="font-mono" style="background: rgba(255,255,255,0.55); border-left: 3px solid var(--petrol); padding: 18px 22px; font-size: 15pt; line-height: 1.55; color: var(--petrol); margin: 0;">datamart  &rarr;  ETL  &rarr;  Parquet on S3
+<pre class="font-mono" style="background: rgba(255,255,255,0.55); border-left: 3px solid var(--petrol); padding: 18px 22px; font-size: 15pt; line-height: 1.55; color: var(--petrol); margin: 0;">datamart  →  ETL  →  Parquet on S3
                        (partitioned by date)
-                              &darr;
+                              ↓
                   SQL engine of customer's choice</pre>
-<p class="text-sm text-muted font-italic" style="margin-top: 14px;">No Iceberg. No Bronze/Silver/Gold medallion. No data catalogue. Validate with Quantum Data Hub, Athena, Power BI, QuickSight ...</p>
+<p class="text-sm text-muted font-italic" style="margin-top: 14px;">No Iceberg. No Bronze/Silver/Gold medallion ETL process. No data catalogue. Validate with Quantum Data Hub, Athena, Power BI, QuickSight ...</p>
 </div>
 <div class="panel oxblood">
-<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">After the thin slice, Explicitly choose one:</p>
+<p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">After the thin Parquet export, Explicitly choose one:</p>
 <ol style="padding-left: 1.4em; margin-top: 8px;">
 <li><strong>The export is enough -</strong>&nbsp;ship it. 90% of the room is relieved.</li>
-<li><strong>Align with Quantum.</strong> Reuse what's there.</li>
+<li><strong>Align with Quantum.</strong> Reuse what's there. Or learn and pivot.</li>
 <li><strong>Build a dedicated lake</strong> (Horizon&nbsp;3), with evidence in hand.</li>
 </ol>
 </div>
 </div>
 <p class="text-center text-xl font-serif font-italic text-muted" style="margin-top: 22px;">
-            The answer may be just providing a Parquet export. We will find out by building one.
+            The answer may be just providing a Parquet export. We will find out by prioritizing building one.
           </p>
 </div>
 <aside class="notes">
           The dry punchline: the simplest possible answer might be the entire answer.
-          That is not a failure of ambition &mdash; that is a successful piece of evidence.
+          That is not a failure of ambition — that is a successful piece of evidence.
         </aside>
 </section>
 <!-- 14 · MEDIUM TERM DONE WHEN -->
-<section id="medium-done">
-<p class="kicker petrol">Medium term &middot; Done when</p>
+<section id="medium-done" class="">
+<p class="kicker petrol">Medium term · Done when</p>
 <h2>Horizon 2 closes when we can answer four questions in writing.</h2>
 <div class="content">
 <div style="display: grid; grid-template-columns: 64px 1fr; gap: 18px 24px; align-items: start; margin-top: 16px;">
 <p class="step-num text-petrol">01</p>
 <div>
 <p class="step-title">Which use cases justify investment?</p>
-<p class="step-note">Ranked, named, agreed, owned.</p>
+<p class="step-note">Ranked, named, agreed and owned between DEV and PM.</p>
 </div>
 <p class="step-num text-petrol">02</p>
 <div>
@@ -403,32 +402,32 @@
 <p class="step-num text-petrol">03</p>
 <div>
 <p class="step-title">Build, reuse, or integrate with Quantum?</p>
-<p class="step-note">One option chosen, dated, signed by both Development Architects and Product Management.</p>
+<p class="step-note">One option chosen, dated, signed off by both DEV Architects and Product Management.</p>
 </div>
 <p class="step-num text-petrol">04</p>
 <div>
-<p class="step-title">What is the minimum viable analytical model?</p>
+<p class="step-title">What is the minimum viable analytical model/schema?</p>
 <p class="step-note">Customer-validated. Backward compatibility documented. Not exhaustive: minimum.</p>
 </div>
 </div>
-<hr class="rule thick" style="margin: 22px 0 12px;"/>
+<hr class="rule thick" style="margin: 22px 0 12px;">
 <p class="text-center text-xl font-serif font-italic text-petrol">
-            These four answers earn Horizon 3. Anything less should not force it.</p>
+            These four answers should position us to start Horizon 3. Anything less should not force it.</p>
 </div>
 <aside class="notes">
-          The closing line is the load-bearing one. Horizon 3 is not on a calendar &mdash; it is on a gate.
+          The closing line is the load-bearing one. Horizon 3 is not on a calendar — it is on a gate.
         </aside>
 </section>
 <!-- 15 · DIVIDER: LONG TERM -->
 <section class="section-divider" data-state="is-section-divider" id="div-long">
-<p class="act-num">Horizon 3 &middot; 2028+</p>
-<h1>Long term:<br/><span class="text-muted">only if justified.</span></h1>
-<p class="act-sub">The advanced data platform we may one day operate.&nbsp;</p>
+<p class="act-num">Horizon 3 · 2028+</p>
+<h1>Long term:<br><span class="text-muted">only if justified.</span></h1>
+<p class="act-sub">An advanced data platform we may one day operate. Beware complexity and maintainability!</p>
 </section>
 <!-- 16 · THE LAKE WE MAY DESERVE -->
-<section id="lake">
-<p class="kicker muted">Long term &middot; use cases required</p>
-<h2>The datalake solution we may one day operate.</h2>
+<section id="lake" class="">
+<p class="kicker muted">Long term · use cases required</p>
+<h2>An advanced data analytics platform / DataOps / MLOps</h2>
 <p class="deck">Six gates. Every commitment on this data platform should pass all six or it doesn't ship to production.&nbsp;</p>
 <div class="content">
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 32px; margin-top: 6px;">
@@ -436,34 +435,34 @@
 <p class="step-num text-petrol">01</p>
 <div>
 <p class="step-title">Customer validation</p>
-<p class="step-note">Named customers, known inputs, known expected outputs and side-effects, documented end-to-end scenarios.</p>
+<p class="step-note">Named customers, known inputs, known expected outputs and side-effects, customer-validated end-to-end scenarios and outcomes.</p>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
 <p class="step-num text-petrol">02</p>
 <div>
 <p class="step-title">Simplest viable alternative</p>
-<p class="step-note">Show us why direct datamart access or Parquet export is insufficient. Use case documentation required.</p>
+<p class="step-note">Show us why direct datamart access or a simple Parquet export is insufficient. Use case documentation required.</p>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
 <p class="step-num text-petrol">03</p>
 <div>
 <p class="step-title">Maintainability</p>
-<p class="step-note">At least 5 engineers not involved in the design can explain, support and change it.</p>
+<p class="step-note">At least 5 engineers not involved in the design and architecture can fully explain, support and change it.</p>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
 <p class="step-num text-petrol">04</p>
 <div>
 <p class="step-title">Operational ownership</p>
-<p class="step-note">OPS, PS, CX, Security, Product Management, Development &mdash; explicit, named, signed.</p>
+<p class="step-note">CIO, PS, CX, Security, Product Management, Development: explicit, named, and signed off.</p>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start;">
 <p class="step-num text-petrol">05</p>
 <div>
-<p class="step-title">Cost &amp; commercial</p>
+<p class="step-title">Cost &amp; commercials</p>
 <p class="step-note">Simple per-customer cost closely tied to pricing or a funding line. No magic proposals.</p>
 </div>
 </div>
@@ -471,7 +470,7 @@
 <p class="step-num text-petrol">06</p>
 <div>
 <p class="step-title">Data freshness honesty</p>
-<p class="step-note">Batch / hourly / near-real-time / synchronous are strictly separated. Every real-time requirement, needs a named reason.</p>
+<p class="step-note">Batch / hourly vs near-real-time / synchronous data use cases are strictly separated. Every real-time requirement, needs a named reason.</p>
 </div>
 </div>
 </div>
@@ -481,18 +480,18 @@
         </aside>
 </section>
 <!-- 17 · AI/ML/MCP -->
-<section id="ai-ml">
-<p class="kicker muted">Long term &middot; AI &middot; ML &middot; anomaly detection</p>
+<section id="ai-ml" class="">
+<p class="kicker muted">Long term · AI · ML · anomaly detection</p>
 <h2>Discovery, not delivery.</h2>
-<p class="deck">This is currently the vaguest section. This is honesty; not a lack of ambition.</p>
+<p class="deck">This is currently too vague and unactionable. This is honesty; not a lack of ambition.</p>
 <div class="content">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 14px;">
 <div>
 <p class="font-mono text-sm text-petrol" style="letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px;">What we will do</p>
 <ul>
-<li>Pick <strong>one</strong>&nbsp;use case, clearly defined end-to-end (anything).</li>
-<li>Try a <strong>statistical baseline first;&nbsp;</strong>the product already has SQL fraud patterns.</li>
-<li>Define action, false-positive plan, explainability, audit, owner.</li>
+<li>Start with&nbsp;<strong>one</strong>&nbsp;use case, clearly defined end-to-end (anything).</li>
+<li>Replicate our&nbsp;<strong>statistical fraud detection first;&nbsp;</strong>the product already has SQL-driven fraud patterns.</li>
+<li>Define the workflow, actions, false-positive plan, explainability, audit, owners.</li>
 <li>Scope a governed LLM / MCP spike against synthetic data.</li>
 </ul>
 </div>
@@ -501,14 +500,14 @@
 <ul>
 <li>Build AWS SageMaker pipelines / Feature data stores / model-serving infra.</li>
 <li>Deploy CDC streaming for sub-10&nbsp;ms scoring.</li>
-<li>Wire Bedrock into production payments workflows.</li>
+<li>Wire AWS Bedrock inference into production payments workflows.</li>
 <li>Promise any unfounded AI capability to a customer, an RFP, or a sales deck.</li>
 </ul>
 </div>
 </div>
-<hr class="rule thick" style="margin: 22px 0 14px;"/>
+<hr class="rule thick" style="margin: 22px 0 14px;">
 <blockquote style="font-size: 22pt; border-left-color: var(--muted-color); margin: 0;">
-            &ldquo;AI/ML&rdquo; is downstream of trustworthy data &mdash; <span class="text-muted">not the foundation for it.</span>
+            “AI/ML” is downstream of trustworthy data — <span class="text-muted">not the foundation for it.</span>
 </blockquote>
 </div>
 <aside class="notes">
@@ -517,139 +516,139 @@
         </aside>
 </section>
 <!-- 18 · PRESSING QUESTIONS · CUSTOMERS -->
-<section id="q-customers">
-<p class="kicker">Make-or-break &middot; Customer use cases</p>
+<section id="q-customers" class="">
+<p class="kicker">Make-or-break · Customer use cases</p>
 <h2>The questions we must answer&nbsp;<span class="text-oxblood font-italic font-serif">about customers</span>.</h2>
-<p class="deck">No named customer, no use case. No use case, no scope. This is the first gate.</p>
+<p class="deck">No named customer, no use case. No use case, no scope.</p>
 <div class="content">
 <div class="question-row">
 <p class="q-num">01</p>
 <div>
-<p class="q-text">Which <em>named customer</em> has analytics that breaks the day Logi turns off &mdash; and which exact dashboards must we reproduce?</p>
-<span class="q-tag">Logi replacement &middot; binary pass/fail</span>
+<p class="q-text">Which <em>named customer</em> has analytics that breaks the day Logi turns off and which exact dashboards must we reproduce?</p>
+<span class="q-tag">Logi replacement · binary pass/fail</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num">02</p>
 <div>
-<p class="q-text">Which named customer has asked, <em>by name</em>, for combined Payment Hub + Quantum analytics &mdash; and what is the specific question they cannot answer today?</p>
-<span class="q-tag">Cross-product use case &middot; Quantum alignment</span>
+<p class="q-text">Which named customer has asked, <em>by name</em>, for combined Payment Hub + Quantum analytics and what is the specific question they cannot answer today?</p>
+<span class="q-tag">Cross-product use case · Quantum alignment</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num">03</p>
 <div>
-<p class="q-text">Which customers have paid for, contractually committed to, or RFP-required <em>anomaly detection, AI/ML, or sub-second scoring</em> &mdash; with named contacts?</p>
-<span class="q-tag">AI/ML scope &middot; defensible commitment</span>
+<p class="q-text">Which customers have paid for, contractually committed to, or RFP-required <em>anomaly detection, AI/ML, or sub-second scoring</em>&nbsp;with named contacts?</p>
+<span class="q-tag">AI/ML scope · defensible commitment</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num">04</p>
 <div>
-<p class="q-text">Which customers are on Trax versions whose datamart schema differs <em>materially</em> from current &mdash; and which of those are in the Logi-replacement pilot?</p>
-<span class="q-tag">Version matrix &middot; runbook risk</span>
+<p class="q-text">Which customers are on Trax versions whose datamart schema differs <em>materially</em> from the standard product and which of those are earmarked as pilots?</p>
+<span class="q-tag">Version matrix · runbook risk</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num">05</p>
 <div>
-<p class="q-text">For each affected customer: is the ask <em>raw datamart access</em>, BI-tool dashboards, Parquet export, or Snowflake/customer-lake ingestion &mdash; and what proves it?</p>
-<span class="q-tag">Access pattern &middot; first commitment</span>
+<p class="q-text">For each affected customer: is the ask <em>raw datamart access</em>, BI-tool dashboards, Parquet export, or external Snowflake/customer-lake ingestion and what proves it?</p>
+<span class="q-tag">Access pattern · first commitment</span>
 </div>
 </div>
 </div>
 <aside class="notes">
           Every question on this slide is answerable in a sentence. If the room cannot answer any of them with a customer name,
-          we do not have a use case &mdash; we have a hypothesis. Press for names. Don't accept categories.
+          we do not have a use case — we have a hypothesis. Press for names. Don't accept categories.
         </aside>
 </section>
 <!-- 19 · PRESSING QUESTIONS · STRATEGY -->
-<section id="q-strategy">
-<p class="kicker petrol">Make-or-break &middot; Strategy</p>
+<section id="q-strategy" class="">
+<p class="kicker petrol">Make-or-break · Strategy</p>
 <h2>The questions we must answer&nbsp;<span class="text-petrol font-italic font-serif">about scope &amp; partners</span>.</h2>
-<p class="deck">Build, reuse, postpone, or stop. One option, signed, dated &mdash; or the architecture decides for us.</p>
+<p class="deck">Build, reuse, postpone, or stop. Pick an option, signed, dated or let the architecture decide (worse).</p>
 <div class="content">
 <div class="question-row">
 <p class="q-num petrol">01</p>
 <div>
-<p class="q-text">Are we building Trax's own analytical platform, <em>reusing Quantum's Treasury Data Hub</em>, or defining an interop contract &mdash; and who signs across both products?</p>
-<span class="q-tag">Build vs reuse &middot; ownership</span>
+<p class="q-text">Are we building Trax's own analytical data platform, <em>reusing Quantum's Treasury Data Hub</em>, or defining an interoperability contract and who signs off and decides across both products?</p>
+<span class="q-tag">Build vs reuse · Senior Leadership</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num petrol">02</p>
 <div>
-<p class="q-text">What is the first funded commitment: <em>Logi replacement</em>, the datalake, or AI/ML &mdash; and what evidence would make us stop, simplify, or postpone?</p>
-<span class="q-tag">Kill criteria &middot; investment gate</span>
+<p class="q-text">What is the first funded commitment: <em>Logi replacement</em>, the datalake, or AI/ML and what evidence would make us stop, simplify, or postpone?</p>
+<span class="q-tag">Kill criteria · investment gate</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num petrol">03</p>
 <div>
-<p class="q-text">Is the deliverable a <em>customer-facing product</em>, an internal Trax foundation, a PS-enabled service, or a data contract &mdash; and what gets sold under what SKU?</p>
-<span class="q-tag">Product boundary &middot; commercial</span>
+<p class="q-text">Is the deliverable a <em>customer-facing product</em>, an internal Trax foundation, a PS-enabled service, or a data contract with Quantum and what gets sold by Sales under what name?</p>
+<span class="q-tag">Product boundary · commercial</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num petrol">04</p>
 <div>
-<p class="q-text">What is the official answer for <em>self-hosted customers</em> &mdash; supported, deprecated, Parquet export only, or migrate to FIS-hosted?</p>
-<span class="q-tag">Hosting policy &middot; non-cloud customers</span>
+<p class="q-text">What is the official answer for <em>non-cloud customers</em>&nbsp;- supported, deprecated, Parquet export only, or migrate to FIS-hosted?</p>
+<span class="q-tag">Hosting policy · non-cloud customers</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num petrol">05</p>
 <div>
-<p class="q-text">Is the analytical model an <em>evolution of the existing datamart</em>, or a redesigned star schema &mdash; and what is the customer-facing backward-compatibility promise?</p>
-<span class="q-tag">Data model &middot; migration path</span>
+<p class="q-text">Is the analytical model an <em>evolution of the existing datamart</em>, or a redesigned star/snowflake schema and what is the customer-facing backward-compatibility promise with the existing datamart?</p>
+<span class="q-tag">Data model · migration path</span>
 </div>
 </div>
 </div>
 <aside class="notes">
           These are the questions that decide whether we have a roadmap or four parallel hopes. Each must be answered in writing,
-          dated, signed by both Development Architects and Product Management. Notice that none of them are technical &mdash;
+          dated, signed by both Development Architects and Product Management. Notice that none of them are technical —
           they are scope and ownership questions wearing technical clothes.
         </aside>
 </section>
 <!-- 20 · PRESSING QUESTIONS · OPERATIONS -->
-<section id="q-operations">
-<p class="kicker muted">Make-or-break &middot; Operations</p>
+<section id="q-operations" class="">
+<p class="kicker muted">Make-or-break · Operations</p>
 <h2>The questions we must answer&nbsp;<span class="font-italic font-serif text-muted">about running this</span>.</h2>
-<p class="deck">A platform without an owner is a future incident. The cost line, the support line, and the runbook owner are not optional.</p>
+<p class="deck">A platform without clear owners is a future incident.</p>
 <div class="content">
 <div class="question-row">
 <p class="q-num muted">01</p>
 <div>
-<p class="q-text">On 1 June 2027, who owns the Logi-replacement runbook end-to-end &mdash; Dev, PS, OPS, or &ldquo;we&rsquo;ll figure it out&rdquo;?</p>
-<span class="q-tag">Operational ownership &middot; named team</span>
+<p class="q-text">On 1 June 2027, who owns the Logi-replacement runbook end-to-end? Dev, PS, OPS, or “we’ll figure it out”?</p>
+<span class="q-tag">Operational ownership · named team</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num muted">02</p>
 <div>
-<p class="q-text">Who funds the platform, the customer migrations, Quantum integration, and AI/ML &mdash; <em>by name and budget line</em>?</p>
-<span class="q-tag">Funding &middot; cost bearer</span>
+<p class="q-text">Who funds the platform, the customer migrations, Quantum integration, and AI/ML&nbsp;<em>by name and budget line</em>?</p>
+<span class="q-tag">Funding · cost bearer</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num muted">03</p>
 <div>
-<p class="q-text">What is the per-customer cost ceiling above which <em>hourly batch, Databricks, or streaming</em> becomes unjustifiable &mdash; and who refuses?</p>
-<span class="q-tag">Cost guardrail &middot; ~$1k&ndash;1.2k/mo</span>
+<p class="q-text">What is the per-customer cost ceiling above which <em>advanced data analytics, batch, or streaming</em> becomes unjustifiable and who refuses?</p>
+<span class="q-tag">Cost guardrails</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num muted">04</p>
 <div>
-<p class="q-text">Who handles BI-tool support, query-performance complaints, schema drift, and version-specific defects &mdash; with an SLA, not goodwill?</p>
-<span class="q-tag">Support model &middot; SLA</span>
+<p class="q-text">Who handles external BI-tool support, query-performance complaints, schema drift, and version-specific defects? With an SLA, not goodwill?</p>
+<span class="q-tag">Support model · SLA</span>
 </div>
 </div>
 <div class="question-row">
 <p class="q-num muted">05</p>
 <div>
-<p class="q-text">How do we track <em>what data customers consume, for what purpose, against what contract</em> &mdash; so direct access doesn&rsquo;t silently become production integration?</p>
-<span class="q-tag">Access governance &middot; audit</span>
+<p class="q-text">How do we track <em>what data customers consume, for what purpose, against what contract?</em>&nbsp;So direct access doesn’t silently become production integration?</p>
+<span class="q-tag">Access governance · audit</span>
 </div>
 </div>
 </div>
@@ -659,44 +658,44 @@
         </aside>
 </section>
 <!-- 21 · THE ASK -->
-<section id="the-ask">
-<p class="kicker">The ask &middot; Four decisions, today</p>
-<h2>What we need to agree on today.</h2>
+<section id="the-ask" class="">
+<p class="kicker">The ask · Four decisions, today</p>
+<h2>What we all need to agree on today.</h2>
 <div class="content">
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 10px;">
 <div class="panel oxblood">
 <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 01</p>
-<h3 style="margin: 4px 0;">Split up the datalake initiative</h3>
-<p>Clear distinction between Logi replacement, datalake evolution, and AI/ML use cases. Separate scope, owners, funding, cadence.</p>
+<h3 style="margin: 4px 0;">Split up the current all-in-one datalake initiative</h3>
+<p>Clear distinction between Logi replacement, datalake evolution, and AI/ML use cases. Separate scope, owners, funding, and cadence (mirroring our internal capacity).</p>
 </div>
 <div class="panel oxblood">
 <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 02</p>
 <h3 style="margin: 4px 0;">Freeze any solutioning that already happened.</h3>
-<p>Long-term reference material, not the next sprint. No new build under it until gates pass.</p>
+<p>Useful as long-term reference material, but not in the next sprint. No new build under it until the discussed gates pass.</p>
 </div>
 <div class="panel oxblood">
 <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 03</p>
-<h3 style="margin: 4px 0;">Focus on Logi replacement</h3>
-<p>Read-only datamart tables access, BI tooling POC, runbook, pilots, synthetic dataset.</p>
+<h3 style="margin: 4px 0;">Focus on Logi replacement via self-service data access for analytics</h3>
+<p>Read-only datamart tables access, external BI tooling POC, runbook, pilots, improved synthetic dataset.</p>
 </div>
 <div class="panel oxblood">
 <p class="font-mono text-sm text-oxblood" style="letter-spacing: 0.14em; text-transform: uppercase;">Decision 04</p>
-<h3 style="margin: 4px 0;">Collaborate on a new business case document for anything beyond Logi replacement</h3>
-<p>Product Management (customer use cases) and Development (feasibility) to work together on a new business case.</p>
+<h3 style="margin: 4px 0;">Close collaboration on new business case documents for anything beyond Logi replacement</h3>
+<p>Product Management (customer-validated use cases), Presales (prospects/competition), PS (existing projects) and Development (product feasibility) to work together on new business cases.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
           Read the four decisions slowly. Look at the relevant leader for each one. Then read the quote.
-          Don't add new arguments &mdash; by this slide the argument is over and we are collecting signatures.
+          Don't add new arguments — by this slide the argument is over and we are collecting signatures.
         </aside>
 </section>
 <!-- 19 · CLOSING -->
 <section class="section-divider" data-state="is-section-divider" id="closing">
 <p class="act-num">Closing</p>
-<h1>Focus on existing customers first.<br/><span class="text-oxblood">Focus on clear use cases.</span><br/>Then build the platform.</h1>
-<p class="act-sub">Tactical delivery now &middot; discovery in parallel &middot; platform investment only when the evidence demands it &middot; AI/ML when the data is ready to support it.</p>
-<p class="footnote" style="margin-top: 36px;">Questions &middot; discussion &middot; alignment</p>
+<h1>Focus on Logi customers first.<br><span class="text-oxblood">Focus on clear use cases.</span><br>Then build an advanced data analytics platform.</h1>
+<p class="act-sub">Tactical delivery now · discovery in parallel · platform investment only when the evidence demands it · AI/ML when the data is ready to support it.</p>
+<p class="footnote" style="margin-top: 36px;">Questions · discussion · alignment</p>
 <aside class="notes">
           Reprise of the title. Sit with it. Open the floor.
         </aside>
@@ -785,4 +784,236 @@
     };
   }
 })();
-</script></body></html>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
